@@ -1,2 +1,5 @@
 /.metadata/
 /RemoteSystemsTempFiles/
+/jpaProject/.classpath
+/jpaProject/.project
+/jpaProject/target/
