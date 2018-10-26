@@ -2,5 +2,4 @@
 /RemoteSystemsTempFiles/
 /jpaProject/.classpath
 /jpaProject/.project
-/jpaProject/target/**
-*/target/**
+/jpaProject/target/
