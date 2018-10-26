@@ -3,4 +3,4 @@
 /jpaProject/.classpath
 /jpaProject/.project
 /jpaProject/target/**
-jpaProject/target/*
+*/target/**
