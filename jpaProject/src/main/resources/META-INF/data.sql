@@ -1,0 +1,1 @@
+INSERT INTO Noticia (titulo, autor, fecha) VALUES ('titulo 1', 'autor 1', '2018-01-01');

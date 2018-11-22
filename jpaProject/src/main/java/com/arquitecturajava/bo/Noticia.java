@@ -3,13 +3,24 @@
  */
 package com.arquitecturajava.bo;
 
+import java.io.Serializable;
 import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * @author User
  *
  */
-public class Noticia {
+@Entity
+public class Noticia implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
 	private String titulo;
 	private String autor;
 	private Date fecha;

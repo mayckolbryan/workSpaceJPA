@@ -6,10 +6,13 @@
 	
 	<persistence-unit name="curso">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<jta-data-source>java:jboss/datasources/pwrIntegrationTron2000DS</jta-data-source>
+		<jta-data-source>java:jboss/datasources/referidos_60</jta-data-source>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect" />
 			<property name="hibernate.show_sql" value="true" />
+			
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+			<property name="javax.persistence.sql-load-script-source" value="META-INF/data.sql"/>
 		</properties>
 	</persistence-unit>
 </persistence>
