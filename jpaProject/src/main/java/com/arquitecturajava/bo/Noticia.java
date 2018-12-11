@@ -6,14 +6,17 @@ package com.arquitecturajava.bo;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author User
  *
  */
 @Entity
+@Table(name="NOTICIA", schema="HR")
 public class Noticia implements Serializable{
 	/**
 	 * 
@@ -21,8 +24,13 @@ public class Noticia implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@Column(name="TITULO")
 	private String titulo;
+	
+	@Column(name="AUTOR")
 	private String autor;
+
+	@Column(name="FECHA")
 	private Date fecha;
 		
 	public Noticia() {
