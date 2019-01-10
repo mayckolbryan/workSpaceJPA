@@ -4,12 +4,18 @@
 package com.arquitecturajava.bo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Cascade;
 
 /**
  * @author User
@@ -32,6 +38,9 @@ public class Noticia implements Serializable{
 
 	@Column(name="FECHA")
 	private Date fecha;
+	
+	@OneToMany(mappedBy="noticia", cascade=CascadeType.ALL)
+	private List<Comentario> comentarios = new ArrayList<Comentario>();
 		
 	public Noticia() {
 		super();
@@ -91,5 +100,17 @@ public class Noticia implements Serializable{
 	}
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
-	}	
+	}
+
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(List<Comentario> comentarios) {
+		this.comentarios = comentarios;
+	}
+	
+	public void addComentario(Comentario c){
+		comentarios.add(c);
+	}
 }
